@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Socket</title>
+</head>
+
+<body>
+
+  <div id="main"></div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <!-- <script>
+    const socket = io('http://localhost:3000');
+
+    socket.on('hello', (data) => { // recebe uma msg
+      console.log(data.msg);
+
+      socket.emit('hello_client_response', { msg: 'Tudo certinho' }); // envia uma mensagem
+    });
+  </script> -->
+
+  <script>
+    const socket = io('http://localhost:3000');
+
+    socket.on('hello', (data) => { // recebe uma msg
+      console.log(data.msg);
+    });
+  </script>
+
+</body>
+
+</html>
